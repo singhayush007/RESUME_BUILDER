@@ -1,64 +1,86 @@
 # 🤖 Resume Builder — Full Stack AI Resume Builder (MERN + Gemini + ImageKit)
 
-![Resume Screenshot](./client/src/assets/resume.png)
+<div align="center">
 
-Resume Builder is a full-stack AI-powered Resume Builder application built using the **MERN stack (MongoDB, Express, React, Node.js)**.  
-It allows users to **create, preview, share, and optimize resumes using AI**, manage multiple templates, and upload images with background removal.  
-The app integrates **Google Gemini AI** for resume optimization and **ImageKit** for storing profile images.
+![GitHub stars](https://img.shields.io/github/stars/singhayush007/RESUME_BUILDER?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/singhayush007/RESUME_BUILDER?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/singhayush007/RESUME_BUILDER?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
+![Made with MERN](https://img.shields.io/badge/Stack-MERN-61DAFB?style=flat-square&logo=react&logoColor=black)
+
+**A production-ready full-stack AI-powered Resume Builder using MERN stack, Google Gemini, and ImageKit.**
+
+[🌐 Live Demo](https://airesumebuilderreact.vercel.app) · [🐛 Report Bug](https://github.com/singhayush007/RESUME_BUILDER/issues) · [✨ Request Feature](https://github.com/singhayush007/RESUME_BUILDER/issues)
+
+</div>
 
 ---
 
-## 🧠 Features
+![Resume Builder Screenshot](./client/src/assets/resume.png)
 
-- 🔐 **User Authentication (Sign up / Sign in)**
-- 📝 **Create New Resume with multiple templates**
-- 👀 **Live Preview & Shareable Link for resumes**
-- 🤖 **AI Resume Optimization using Google Gemini**
-- 🖼️ **Upload & Edit Images with background removal**
-- ✏️ **Manage Resume (Add, Edit, Delete)**
-- 💻 **Responsive Frontend built using React + Tailwind CSS**
-- 📦 **MongoDB Database for storing resumes and user data**
-- ⚡ **Express.js Backend with secure API routes**
+---
+
+## 📋 Table of Contents
+
+- [About](#-about)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Folder Structure](#️-folder-structure)
+- [Getting Started](#-getting-started)
+- [Environment Variables](#-environment-variables)
+- [Running the App](#-running-the-app)
+- [Deployment](#️-deployment)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 📖 About
+
+**Resume Builder** is a full-stack AI-powered application built using the **MERN stack (MongoDB, Express, React, Node.js)**.
+
+It allows users to **create, preview, share, and optimize resumes using AI**, manage multiple templates, and upload profile images with background removal. The app integrates **Google Gemini AI** for smart resume optimization and **ImageKit** for cloud image storage and processing.
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+| --- | --- |
+| 🔐 **User Authentication** | Secure signup, login, and JWT-based authentication with password hashing using **bcryptjs** |
+| 📝 **Create New Resume** | Build resumes using multiple templates with full customization |
+| 👀 **Live Preview & Shareable Link** | See resume changes in real-time and generate shareable links |
+| 🤖 **AI Resume Optimization** | Improve and optimize resumes automatically using **Google Gemini AI** |
+| 🖼️ **Upload & Edit Images** | Add profile images to resumes and remove backgrounds using **ImageKit** |
+| ✏️ **Manage Resumes** | Add, edit, and delete resumes easily |
+| 💻 **Responsive Frontend** | Clean and interactive UI built with **React.js** and **Tailwind CSS** |
+| 📦 **MongoDB Database** | Store resumes, templates, and user data securely |
+| ⚡ **Express.js Backend** | Secure REST API routes for all frontend interactions |
+| 🌐 **Environment Configuration** | Manage API keys, MongoDB URI, and AI service keys securely using `.env` |
+| ☁️ **Deployment Ready** | Fully deployable MERN stack app with production-ready configurations |
 
 ---
 
 ## 💻 Tech Stack
 
-| Technology                                                                                                     | Description                                              |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| ![React.js](https://img.shields.io/badge/React.js-61DAFB?style=flat&logo=react&logoColor=black)                | Frontend library for building dynamic and interactive UI |
-| ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwind-css&logoColor=white) | Utility-first CSS framework for responsive UI design     |
-| ![Prebuilt UI](https://img.shields.io/badge/Prebuilt_UI-FF69B4?style=flat)                                     | Ready-to-use UI components to speed up development       |
-| ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)                         | Frontend build tool for faster development               |
-| ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)                | JavaScript runtime for backend                           |
-| ![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white)          | Web framework for building API routes                    |
-| ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)                | NoSQL database for storing resumes and user data         |
-| ![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=flat&logo=mongoose&logoColor=white)             | ODM library for MongoDB                                  |
-| ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat&logo=axios&logoColor=white)                      | HTTP client for frontend-backend communication           |
-| ![BcryptJS](https://img.shields.io/badge/BcryptJS-3385FF?style=flat)                                           | Password hashing & encryption                            |
-| ![CORS](https://img.shields.io/badge/CORS-FFB400?style=flat)                                                   | Middleware for cross-origin requests                     |
-| ![Dotenv](https://img.shields.io/badge/Dotenv-000000?style=flat)                                               | Manage environment variables                             |
-| ![JWT](https://img.shields.io/badge/JWT-000000?style=flat&logo=jsonwebtokens&logoColor=white)                  | Token-based authentication                               |
-| ![ImageKit](https://img.shields.io/badge/ImageKit-1D1D1D?style=flat&logo=imagekit&logoColor=00D9FF)            | Cloud image optimization & background removal            |
-| ![Google Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=flat&logo=google&logoColor=white)     | AI model for resume improvement and optimization         |
+### Frontend
+![React.js](https://img.shields.io/badge/React.js-61DAFB?style=flat&logo=react&logoColor=black)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=reactrouter&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat&logo=axios&logoColor=white)
 
----
-
-## 🚀 Features
-
-| Feature                              | Description                                                                                      |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| 🔐 **User Authentication**           | Secure user signup, login, and JWT-based authentication with password hashing using **bcryptjs** |
-| 📝 **Create New Resume**             | Build resumes using multiple templates with full customization                                   |
-| 👀 **Live Preview & Shareable Link** | See resume changes in real-time and generate shareable links                                     |
-| 🤖 **AI Resume Optimization**        | Improve and optimize resumes automatically using **Google Gemini AI**                            |
-| 🖼️ **Upload & Edit Images**          | Add images to resumes and remove backgrounds using **ImageKit**                                  |
-| ✏️ **Manage Resume**                 | Add, edit, and delete resumes easily                                                             |
-| 💻 **Responsive Frontend**           | Clean and interactive UI built with **React.js** and **Tailwind CSS**                            |
-| 📦 **MongoDB Database**              | Store resumes, templates, and user data securely                                                 |
-| ⚡ **Express.js Backend**            | Secure REST API routes for all frontend interactions                                             |
-| 🌐 **Environment Configuration**     | Manage API keys, MongoDB URI, and AI service keys securely using `.env`                          |
-| ☁️ **Deployment Ready**              | Fully deployable MERN stack app with environment variables and production configurations         |
+### Backend
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
+![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=flat)
+![JWT](https://img.shields.io/badge/JWT-000000?style=flat&logo=jsonwebtokens&logoColor=white)
+![BcryptJS](https://img.shields.io/badge/BcryptJS-3385FF?style=flat)
+![ImageKit](https://img.shields.io/badge/ImageKit-1D1D1D?style=flat&logo=imagekit&logoColor=00D9FF)
+![Google Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=flat&logo=google&logoColor=white)
+![Multer](https://img.shields.io/badge/Multer-EE6C4D?style=flat)
+![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?style=flat)
 
 ---
 
@@ -67,85 +89,152 @@ The app integrates **Google Gemini AI** for resume optimization and **ImageKit**
 ```
 resume-builder/
 │
-├── client/ # Frontend (React.js)
-│ ├── public/ # Static assets (favicon, logos, etc.)
-│ ├── src/ # Source code
-│ │ ├── components/ # Reusable UI components
-│ │ ├── pages/ # Page components (Home, Dashboard, Resume, etc.)
-│ │ ├── assets/ # Images and icons
-│ │ ├── App.jsx # Main App component
-│ │ └── main.jsx # Entry point
-│ ├── package.json # Frontend dependencies
-│ └── vite.config.js # Vite config
+├── client/                  # Frontend (React + Vite + Tailwind)
+│   ├── public/              # Static assets (favicon, logos, etc.)
+│   ├── src/
+│   │   ├── components/      # Reusable UI components
+│   │   ├── pages/           # Page components (Home, Dashboard, Resume, etc.)
+│   │   ├── assets/          # Images and icons
+│   │   ├── App.jsx          # Main App component
+│   │   └── main.jsx         # Entry point
+│   ├── .env                 # Local env (not committed)
+│   ├── .env.example         # Env template
+│   └── package.json
 │
-├── server/ # Backend (Node.js + Express)
-│ ├── configs/ # Config files (DB, AI, ImageKit, multer)
-│ ├── controllers/ # Controllers (Resume, User, AI)
-│ ├── middlewares/ # Middleware (auth)
-│ ├── models/ # MongoDB models (Resume, User)
-│ ├── routes/ # API routes
-│ ├── server.js # Main server file
-│ ├── package.json # Backend dependencies
-│ └── node_modules/ # Installed node packages
+├── server/                  # Backend (Node.js + Express)
+│   ├── configs/             # Config files (DB, AI, ImageKit, multer)
+│   ├── controllers/         # Controllers (Resume, User, AI)
+│   ├── middlewares/         # Middleware (auth)
+│   ├── models/              # MongoDB models (Resume, User)
+│   ├── routes/              # API routes
+│   ├── server.js            # Main server file
+│   ├── .env                 # Local env (not committed)
+│   ├── .env.example         # Env template
+│   └── package.json
 │
-├── README.md # Project documentation
-└── .gitignore # Git ignored files
+├── README.md
+└── .gitignore
 ```
+
+---
 
 ## 🏁 Getting Started
 
-Follow these steps to run the project locally:
+### Prerequisites
 
-1. **Clone the repository:**
+Make sure you have the following installed:
 
-```
+- [Node.js](https://nodejs.org/) v18+
+- [npm](https://www.npmjs.com/) v9+
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account (or local MongoDB)
+- [ImageKit](https://imagekit.io/) account
+- [Google Gemini API Key](https://aistudio.google.com/app/apikey)
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/singhayush007/RESUME_BUILDER.git
-```
-
-2. **Navigate to the project folder:**
-
-```
 cd RESUME_BUILDER
 ```
 
-3. **Install dependencies:**
+### 2. Install dependencies
 
-```
-npm install
-```
+Each part of the app has its own `package.json`. Install dependencies separately:
 
-4. **Create a .env.local file in the root and add your environment variables:**
+```bash
+# Backend
+cd server && npm install
 
-```
-# MongoDB URI
-MONGODB_URI=your_mongodb_connection_uri
-
-# Gemini AI Key
-GEMINI_API_KEY=your_gemini_api_key
-
-# ImageKit Keys
-IMAGEKIT_PUBLIC_KEY=your_imagekit_public_key
-IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
-IMAGEKIT_URL_ENDPOINT=your_imagekit_url_endpoint
+# Frontend
+cd ../client && npm install
 ```
 
-5. **Run the development server and client:**
+---
 
+## 🔐 Environment Variables
+
+Each package has a `.env.example` file. Copy it to `.env` and fill in your values.
+
+### Backend (`server/.env`)
+
+```bash
+cp server/.env.example server/.env
 ```
-cd client : npm run dev
-cd server : npm run server
+
+| Variable | Description |
+| --- | --- |
+| `JWT_SECRET` | Secret key for signing JWT tokens |
+| `MONGODB_URI` | MongoDB connection string |
+| `IMAGEKIT_PRIVATE_KEY` | ImageKit private API key |
+| `OPENAI_API_KEY` | Gemini API key (used via OpenAI-compatible endpoint) |
+| `OPENAI_BASE_URL` | Gemini base URL (`https://generativelanguage.googleapis.com/v1beta/openai/`) |
+| `OPENAI_MODEL` | Model name (e.g. `gemini-2.5-flash`) |
+
+### Frontend (`client/.env`)
+
+```bash
+cp client/.env.example client/.env
 ```
 
-6. **Open the app in your browser:**
+| Variable | Description |
+| --- | --- |
+| `VITE_API_BASE_URL` | Backend API base URL (e.g. `http://localhost:5000`) |
 
+---
+
+## ▶️ Running the App
+
+Open **two separate terminals** and run:
+
+```bash
+# Terminal 1 — Backend (runs on http://localhost:5000)
+cd server
+npm run server
 ```
-http://localhost:5173
+
+```bash
+# Terminal 2 — Frontend (runs on http://localhost:5173)
+cd client
+npm run dev
 ```
 
-## 💻 Deployment
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
 
-You can deploy this app using Vercel, Docker, or any Node.js hosting platform.
+---
+
+## ☁️ Deployment
+
+This project is deployed on **Vercel**. You can also deploy on **Railway**, **Render**, or **Heroku**.
+
+| Service | Recommended For |
+| --- | --- |
+| [Vercel](https://vercel.com) | Frontend |
+| [Vercel](https://vercel.com) / [Railway](https://railway.app) | Backend |
+| [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) | Database |
+| [ImageKit](https://imagekit.io) | Image storage & processing |
+
+> Make sure to set all environment variables in your hosting platform's dashboard before deploying.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how to get started:
+
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Commit your changes: `git commit -m 'add: your feature description'`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Open a Pull Request
+
+---
 
 ## 📄 License
 
-This project is licensed under the MIT License — feel free to use and modify it as per your needs.
+This project is licensed under the **MIT License** — feel free to use and modify it as per your needs.
+
+---
+
+<div align="center">
+  Made with ❤️ by <a href="https://github.com/singhayush007">Ayush Singh</a>
+</div>
